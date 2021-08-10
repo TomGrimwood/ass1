@@ -1,0 +1,72 @@
+$date
+	Wed Aug 11 10:23:42 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ms
+$end
+$scope module TaskTwo_tb $end
+$var wire 1 ! b $end
+$var reg 4 " a [3:0] $end
+$scope module iand2 $end
+$var wire 4 # nibble [3:0] $end
+$var wire 1 ! trueIfTenPlus $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 #
+b0 "
+0!
+$end
+#10
+b1 "
+b1 #
+#20
+b10 "
+b10 #
+#30
+b11 "
+b11 #
+#40
+b100 "
+b100 #
+#50
+b101 "
+b101 #
+#60
+b110 "
+b110 #
+#70
+b111 "
+b111 #
+#80
+0!
+b1000 "
+b1000 #
+#90
+b1001 "
+b1001 #
+#100
+1!
+b1010 "
+b1010 #
+#110
+b1011 "
+b1011 #
+#120
+b1100 "
+b1100 #
+#130
+b1101 "
+b1101 #
+#140
+b1110 "
+b1110 #
+#150
+b1111 "
+b1111 #
+#160

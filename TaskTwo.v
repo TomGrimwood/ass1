@@ -54,7 +54,7 @@
 	 output [3:0]nibbleOut;
 	 
 	 assign nibbleOut[3] = nibbleIn[3];
-	 assign nibbleOut[2] = ~nibbleIn[2] & nibbleIn[1];
+	 assign nibbleOut[2] = ~nibbleIn[2];
 	 assign nibbleOut[1] = nibbleIn[1] & nibbleIn[2];
 	 assign nibbleOut[0] = 0;
 	 
@@ -79,14 +79,26 @@ module CircuitB(trueIfTenPlus, HEX);
 
 	input trueIfTenPlus;
 	output [6:0]HEX;
-	wire [3:0]w1
+	wire [3:0]w1;
 
 	assign w1[3:0] = trueIfTenPlus;
 
-	assign hexDisplay U1(w1,HEX);
+	hexDisplay U1(w1[3:0],HEX);
 
 endmodule
 
+// module Mux2To1(xIn, s, f);
+
+// 	input [1:0]xIn,s;
+// 	output f;
+// 	wire w1, w2;
+
+// 	assign w1 = x[0] & ~s;
+// 	assign w2 = x[1] & s;
+	
+// 	assign f  = w1 | w2;
+
+// endmodule
  
 
 
