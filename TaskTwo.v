@@ -1,6 +1,6 @@
  
 // v0 v1 v2 v3		dec		comp	circA			circB	
-// 									b0 b1 b2 b3
+// 									b3 b2 b1 b0
 
 
 
@@ -27,12 +27,30 @@
 // b1   = v1 v2
 // b2   = ~v2
 // b3   = v3 
- module TaskTwo(SW,a);
+ module TaskTwo(V,HEXTens, HEXOnes,z ,m);
  
-	input[3:0]SW;
-	output a;
+	input[3:0]V;
+	output [7:0]HEXTens;
+	output [7:0]HEXOnes;
+	output z;
+	output [3:0]m;
+	//wire z, [3:0]m, [2:0]aOut;
+	wire [2:0]aOut;
 	
-	Comparator U1(SW[3:0], a);
+	Comparator U1( V[3:0], z );
+
+	CircuitA A1( V[2:0], aOut[2:0]);
+
+	mux2to1 M3( V[3], 0, z, m[3] );
+	mux2to1 M2( V[2], aOut[2], z, m[2] );
+	mux2to1 M1( V[1], aOut[1], z, m[1] );
+	mux2to1 M0( V[0], aOut[0], z, m[0] );
+
+	CircuitB B1( z, HEXTens);
+	
+	hexDisplay H1( m, HexTens);
+	
+
  
 	
  
@@ -50,13 +68,12 @@
 
   module CircuitA(nibbleIn, nibbleOut);
 	 
-	 input[3:0]nibbleIn;
-	 output [3:0]nibbleOut;
+	 input[2:0]nibbleIn;
+	 output [2:0]nibbleOut;
 	 
-	 assign nibbleOut[3] = nibbleIn[3];
-	 assign nibbleOut[2] = ~nibbleIn[2];
-	 assign nibbleOut[1] = nibbleIn[1] & nibbleIn[2];
-	 assign nibbleOut[0] = 0;
+	 assign nibbleOut[2] = nibbleIn[1] & nibbleIn[2];
+	 assign nibbleOut[1] = ~nibbleIn[1];
+	 assign nibbleOut[0] = nibbleIn[0];
 	 
  endmodule
  
@@ -87,18 +104,11 @@ module CircuitB(trueIfTenPlus, HEX);
 
 endmodule
 
-// module Mux2To1(xIn, s, f);
-
-// 	input [1:0]xIn,s;
-// 	output f;
-// 	wire w1, w2;
-
-// 	assign w1 = x[0] & ~s;
-// 	assign w2 = x[1] & s;
-	
-// 	assign f  = w1 | w2;
-
-// endmodule
+module mux2to1 (x1, x2, s, f); 
+	input x1, x2, s;
+	output f;
+	assign f = ( ~s&x1) | (s&x2);
+endmodule
  
 
 

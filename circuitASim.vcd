@@ -1,5 +1,5 @@
 $date
-	Wed Aug 11 10:23:42 2021
+	Wed Aug 11 12:15:35 2021
 $end
 $version
 	Icarus Verilog
@@ -7,66 +7,95 @@ $end
 $timescale
 	100ms
 $end
-$scope module TaskTwo_tb $end
-$var wire 1 ! b $end
+$scope module circuitASim_tb $end
+$var wire 4 ! b [3:0] $end
 $var reg 4 " a [3:0] $end
-$scope module iand2 $end
-$var wire 4 # nibble [3:0] $end
-$var wire 1 ! trueIfTenPlus $end
+$scope module U1 $end
+$var wire 4 # nibbleIn [3:0] $end
+$var wire 4 $ nibbleOut [3:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+b10 $
 b0 #
 b0 "
-0!
+b10 !
 $end
 #10
+b11 !
+b11 $
 b1 "
 b1 #
 #20
+b0 !
+b0 $
 b10 "
 b10 #
 #30
+b1 !
+b1 $
 b11 "
 b11 #
 #40
+b10 !
+b10 $
 b100 "
 b100 #
 #50
+b11 !
+b11 $
 b101 "
 b101 #
 #60
+b100 !
+b100 $
 b110 "
 b110 #
 #70
+b101 !
+b101 $
 b111 "
 b111 #
 #80
-0!
+b10 !
+b10 $
 b1000 "
 b1000 #
 #90
+b11 !
+b11 $
 b1001 "
 b1001 #
 #100
-1!
+b0 !
+b0 $
 b1010 "
 b1010 #
 #110
+b1 !
+b1 $
 b1011 "
 b1011 #
 #120
+b10 !
+b10 $
 b1100 "
 b1100 #
 #130
+b11 !
+b11 $
 b1101 "
 b1101 #
 #140
+b100 !
+b100 $
 b1110 "
 b1110 #
 #150
+b101 !
+b101 $
 b1111 "
 b1111 #
 #160
