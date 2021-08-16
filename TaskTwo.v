@@ -27,28 +27,29 @@
 // b1   = v1 v2
 // b2   = ~v2
 // b3   = v3 
- module TaskTwo(V,HEXTens, HEXOnes,z ,m);
+ module TaskTwo(V, HEXTens, HEXOnes);
  
 	input[3:0]V;
-	output [7:0]HEXTens;
-	output [7:0]HEXOnes;
-	output z;
-	output [3:0]m;
-	//wire z, [3:0]m, [2:0]aOut;
+	output [6:0]HEXTens;
+	output [6:0]HEXOnes;
+	wire [3:0]m;
 	wire [2:0]aOut;
-	
-	Comparator U1( V[3:0], z );
+	wire Z;
+	wire untrue = 1'b0;
+
+	Comparator U1( V[3:0], Z );
 
 	CircuitA A1( V[2:0], aOut[2:0]);
 
-	mux2to1 M3( V[3], 0, z, m[3] );
-	mux2to1 M2( V[2], aOut[2], z, m[2] );
-	mux2to1 M1( V[1], aOut[1], z, m[1] );
-	mux2to1 M0( V[0], aOut[0], z, m[0] );
-
-	CircuitB B1( z, HEXTens);
 	
-	hexDisplay H1( m, HexTens);
+	mux2to1 M3( V[3], untrue, Z, m[3] );
+	mux2to1 M2( V[2], aOut[2], Z, m[2] );
+	mux2to1 M1( V[1], aOut[1], Z, m[1] );
+	mux2to1 M0( V[0], aOut[0], Z, m[0] );
+
+	CircuitB B1( Z, HEXTens[6:0]);
+	
+	hexDisplay H1( m, HEXOnes[6:0]);
 	
 
  
@@ -100,7 +101,7 @@ module CircuitB(trueIfTenPlus, HEX);
 
 	assign w1[3:0] = trueIfTenPlus;
 
-	hexDisplay U1(w1[3:0],HEX);
+	hexDisplay U1(w1[3:0],HEX[6:0]);
 
 endmodule
 
