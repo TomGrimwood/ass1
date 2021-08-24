@@ -1,0 +1,161 @@
+$date
+	Tue Aug 24 14:21:32 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ms
+$end
+$scope module TaskFour_tb $end
+$var wire 4 ! s1 [3:0] $end
+$var wire 4 " s0 [3:0] $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$var reg 1 % c $end
+$scope module Z1 $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 1 % c $end
+$var wire 4 ( s1 [3:0] $end
+$var wire 4 ) s0 [3:0] $end
+$var wire 3 * cWire [2:0] $end
+$var wire 5 + adderOutput [4:0] $end
+$scope module F1 $end
+$var wire 1 , a $end
+$var wire 1 - b $end
+$var wire 1 % cIn $end
+$var wire 1 . s $end
+$var wire 1 / w1 $end
+$var wire 1 0 cOut $end
+$scope module M1 $end
+$var wire 1 0 f $end
+$var wire 1 / s $end
+$var wire 1 - x1 $end
+$var wire 1 % x2 $end
+$upscope $end
+$upscope $end
+$scope module F2 $end
+$var wire 1 1 a $end
+$var wire 1 2 b $end
+$var wire 1 3 cIn $end
+$var wire 1 4 s $end
+$var wire 1 5 w1 $end
+$var wire 1 6 cOut $end
+$scope module M1 $end
+$var wire 1 6 f $end
+$var wire 1 5 s $end
+$var wire 1 2 x1 $end
+$var wire 1 3 x2 $end
+$upscope $end
+$upscope $end
+$scope module F3 $end
+$var wire 1 7 a $end
+$var wire 1 8 b $end
+$var wire 1 9 cIn $end
+$var wire 1 : s $end
+$var wire 1 ; w1 $end
+$var wire 1 < cOut $end
+$scope module M1 $end
+$var wire 1 < f $end
+$var wire 1 ; s $end
+$var wire 1 8 x1 $end
+$var wire 1 9 x2 $end
+$upscope $end
+$upscope $end
+$scope module F4 $end
+$var wire 1 = a $end
+$var wire 1 > b $end
+$var wire 1 ? cIn $end
+$var wire 1 @ s $end
+$var wire 1 A w1 $end
+$var wire 1 B cOut $end
+$scope module M1 $end
+$var wire 1 B f $end
+$var wire 1 A s $end
+$var wire 1 > x1 $end
+$var wire 1 ? x2 $end
+$upscope $end
+$upscope $end
+$scope module adder $end
+$var wire 5 C fiveBitsIn [4:0] $end
+$var wire 4 D lessThanTenTens [3:0] $end
+$var wire 4 E moreThanTenTens [3:0] $end
+$var wire 1 F trueIfTenPlus $end
+$var wire 4 G moreThanTenOnes [3:0] $end
+$var wire 4 H lessThanTenOnes [3:0] $end
+$var wire 4 I digitTens [3:0] $end
+$var wire 4 J digitOnes [3:0] $end
+$scope module F1 $end
+$var wire 4 K x1 [3:0] $end
+$var wire 4 L x2 [3:0] $end
+$var wire 1 F s $end
+$var wire 4 M f [3:0] $end
+$upscope $end
+$scope module F2 $end
+$var wire 4 N x1 [3:0] $end
+$var wire 4 O x2 [3:0] $end
+$var wire 1 F s $end
+$var wire 4 P f [3:0] $end
+$upscope $end
+$scope module G1 $end
+$var wire 5 Q fiveBitsIn [4:0] $end
+$var wire 1 F moreThanTen $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10011 Q
+b1 P
+b1 O
+b0 N
+b1001 M
+b1001 L
+b11 K
+b1001 J
+b1 I
+b11 H
+b1001 G
+1F
+b1 E
+b0 D
+b10011 C
+1B
+0A
+0@
+0?
+1>
+1=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+14
+13
+02
+01
+10
+0/
+1.
+1-
+1,
+b10011 +
+b1 *
+b1001 )
+b1 (
+b1001 '
+b1001 &
+1%
+b1001 $
+b1001 #
+b1001 "
+b1 !
+$end
+#10
