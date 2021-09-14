@@ -1,5 +1,5 @@
 $date
-	Tue Aug 24 14:21:32 2021
+	Tue Aug 24 15:03:01 2021
 $end
 $version
 	Icarus Verilog
@@ -108,27 +108,27 @@ $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b10011 Q
+b1010 Q
 b1 P
 b1 O
 b0 N
-b1001 M
-b1001 L
-b11 K
-b1001 J
+b0 M
+b0 L
+b1010 K
+b0 J
 b1 I
-b11 H
-b1001 G
+b1010 H
+b0 G
 1F
 b1 E
 b0 D
-b10011 C
-1B
-0A
-0@
+b1010 C
+0B
+1A
+1@
 0?
 1>
-1=
+0=
 0<
 0;
 0:
@@ -142,20 +142,20 @@ b10011 C
 02
 01
 10
-0/
-1.
+1/
+0.
 1-
-1,
-b10011 +
+0,
+b1010 +
 b1 *
-b1001 )
+b0 )
 b1 (
 b1001 '
-b1001 &
+b0 &
 1%
 b1001 $
-b1001 #
-b1001 "
+b0 #
+b0 "
 b1 !
 $end
 #10
